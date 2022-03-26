@@ -17,7 +17,7 @@ export const GameItem = ({ game }) => {
                     ))}
                 </div>
                 <div className="game-item__buy">
-                    <GameBuy game={game} />
+                    <GameBuy game={game} key={game.id} />
                 </div>
             </div>
         </div>
