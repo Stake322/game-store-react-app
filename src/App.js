@@ -7,8 +7,9 @@ import {
 import Header from "./components/header/header";
 import HomePage from "./pages/home-page/home-page";
 import { Provider } from "react-redux";
-
+import { GamePage } from "./pages/game-page/game-page";
 import { store } from "./redux";
+import { OrderPage } from "./pages/order-page/order-page";
 
 function App() {
   return (
@@ -22,8 +23,12 @@ function App() {
               <Route exact path="/">
                 <HomePage />
               </Route>
-
-
+              <Route exact path="/app/:title">
+                <GamePage />
+              </Route>
+              <Route exact path="/order">
+                <OrderPage />
+              </Route>
             </Switch>
 
           </>
